@@ -1,4 +1,4 @@
-# How to Compile libxayagame. 
+# How to Compile libxayagame
 
 In this tutorial, we'll compile libxayagame so that we can use it in other tutorials and even in our own games. Follow the instructions below exactly and do not deviate from them. 
 
