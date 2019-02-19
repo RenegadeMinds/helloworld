@@ -1,0 +1,955 @@
+
+Renegade@RENEGADEDESKTOP MINGW64 ~
+$ ./install_xaya_2.sh <<!
+> Y
+> !
+Cloning into 'libxayagame'...
+remote: Enumerating objects: 66, done.
+remote: Counting objects: 100% (66/66), done.
+remote: Compressing objects: 100% (49/49), done.
+Receiving objects:  90% (867/963)remote: Total 963 (delta 30), reused 36 (delta 17), pack-reused 897
+Receiving objects: 100% (963/963), 407.24 KiB | 3.42 MiB/s, done.
+Resolving deltas: 100% (663/663), done.
+warning: autoconf-archive-2019.01.06-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-protobuf-3.6.1.3-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gtest-1.8.1-2 is up to date -- reinstalling
+warning: mingw-w64-x86_64-gflags-2.2.2-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-zeromq-4.3.1-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-openssl-1.1.1.a-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-glog-0.3.5-2 is up to date -- reinstalling
+warning: mingw-w64-x86_64-lmdb-0.9.23-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-lmdbxx-0.9.14.0-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-sqlite3-3.27.0-1 is up to date -- reinstalling
+warning: mingw-w64-x86_64-libmicrohttpd-0.9.63-1 is up to date -- reinstalling
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (11) autoconf-archive-2019.01.06-1  mingw-w64-x86_64-gflags-2.2.2-1  mingw-w64-x86_64-glog-0.3.5-2  mingw-w64-x86_64-gtest-1.8.1-2
+              mingw-w64-x86_64-libmicrohttpd-0.9.63-1  mingw-w64-x86_64-lmdb-0.9.23-1  mingw-w64-x86_64-lmdbxx-0.9.14.0-1  mingw-w64-x86_64-openssl-1.1.1.a-1
+              mingw-w64-x86_64-protobuf-3.6.1.3-1  mingw-w64-x86_64-sqlite3-3.27.0-1  mingw-w64-x86_64-zeromq-4.3.1-1
+
+Total Installed Size:  101.15 MiB
+Net Upgrade Size:        0.00 MiB
+
+:: Proceed with installation? [Y/n] Y
+(11/11) checking keys in keyring                                                                         [#############################################################] 100%
+(11/11) checking package integrity                                                                       [#############################################################] 100%
+(11/11) loading package files                                                                            [#############################################################] 100%
+(11/11) checking for file conflicts                                                                      [#############################################################] 100%
+(11/11) checking available disk space                                                                    [#############################################################] 100%
+:: Processing package changes...
+( 1/11) reinstalling autoconf-archive                                                                    [#############################################################] 100%
+( 2/11) reinstalling mingw-w64-x86_64-protobuf                                                           [#############################################################] 100%
+( 3/11) reinstalling mingw-w64-x86_64-gtest                                                              [#############################################################] 100%
+( 4/11) reinstalling mingw-w64-x86_64-gflags                                                             [#############################################################] 100%
+( 5/11) reinstalling mingw-w64-x86_64-zeromq                                                             [#############################################################] 100%
+( 6/11) reinstalling mingw-w64-x86_64-openssl                                                            [#############################################################] 100%
+( 7/11) reinstalling mingw-w64-x86_64-glog                                                               [#############################################################] 100%
+( 8/11) reinstalling mingw-w64-x86_64-lmdb                                                               [#############################################################] 100%
+( 9/11) reinstalling mingw-w64-x86_64-lmdbxx                                                             [#############################################################] 100%
+(10/11) reinstalling mingw-w64-x86_64-sqlite3                                                            [#############################################################] 100%
+(11/11) reinstalling mingw-w64-x86_64-libmicrohttpd                                                      [#############################################################] 100%
+Cloning into 'argtable2'...
+remote: Enumerating objects: 121, done.
+remote: Total 121 (delta 0), reused 0 (delta 0), pack-reused 121
+Receiving objects: 100% (121/121), 2.38 MiB | 4.82 MiB/s, done.
+Resolving deltas: 100% (36/36), done.
+-- The C compiler identification is GNU 8.2.1
+-- The CXX compiler identification is GNU 8.2.1
+-- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe
+-- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: C:/msys64/mingw64/bin/g++.exe
+-- Check for working CXX compiler: C:/msys64/mingw64/bin/g++.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/msys64/home/Renegade/argtable2
+Scanning dependencies of target argtable2
+[  9%] Building C object src/CMakeFiles/argtable2.dir/arg_dbl.c.obj
+[ 18%] Building C object src/CMakeFiles/argtable2.dir/arg_end.c.obj
+[ 27%] Building C object src/CMakeFiles/argtable2.dir/arg_file.c.obj
+[ 36%] Building C object src/CMakeFiles/argtable2.dir/arg_int.c.obj
+C:/msys64/home/Renegade/argtable2/src/arg_int.c: In function 'strtol0X':
+C:/msys64/home/Renegade/argtable2/src/arg_int.c:60:12: warning: implicit declaration of function 'isspace' [-Wimplicit-function-declaration]
+     while (isspace(*ptr))
+            ^~~~~~~
+C:/msys64/home/Renegade/argtable2/src/arg_int.c:89:8: warning: implicit declaration of function 'toupper' [-Wimplicit-function-declaration]
+    if (toupper(*ptr++)!=toupper(X))
+        ^~~~~~~
+[ 45%] Building C object src/CMakeFiles/argtable2.dir/arg_lit.c.obj
+[ 54%] Building C object src/CMakeFiles/argtable2.dir/arg_rem.c.obj
+[ 63%] Building C object src/CMakeFiles/argtable2.dir/arg_str.c.obj
+[ 72%] Building C object src/CMakeFiles/argtable2.dir/argtable2.c.obj
+[ 81%] Building C object src/CMakeFiles/argtable2.dir/getopt.c.obj
+[ 90%] Building C object src/CMakeFiles/argtable2.dir/getopt1.c.obj
+[100%] Linking C static library libargtable2.a
+[100%] Built target argtable2
+[100%] Built target argtable2
+Install the project...
+-- Install configuration: ""
+-- Installing: C:/msys64/mingw64/lib/libargtable2.a
+Cloning into 'libjson-rpc-cpp'...
+remote: Enumerating objects: 7249, done.
+remote: Total 7249 (delta 0), reused 0 (delta 0), pack-reused 7249
+Receiving objects: 100% (7249/7249), 1.89 MiB | 3.56 MiB/s, done.
+Resolving deltas: 100% (5014/5014), done.
+Note: checking out 'a5bc3de024b78f0f8cab28416e402871708dfa92'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a5bc3de Merge branch 'release/v0.7.0'
+-- The C compiler identification is GNU 8.2.1
+-- The CXX compiler identification is GNU 8.2.1
+-- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe
+-- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: C:/msys64/mingw64/bin/g++.exe
+-- Check for working CXX compiler: C:/msys64/mingw64/bin/g++.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at CMakeLists.txt:10 (cmake_policy):
+  The OLD behavior for policy CMP0042 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- TCP_SOCKET_SERVER: NO
+-- TCP_SOCKET_CLIENT: NO
+-- HTTP_SERVER: YES
+-- HTTP_CLIENT: YES
+-- COMPILE_TESTS: NO
+-- COMPILE_STUBGEN: YES
+-- COMPILE_EXAMPLES: NO
+-- Found jsoncpp: C:/msys64/mingw64/include
+-- Jsoncpp header: C:/msys64/mingw64/include
+-- Jsoncpp lib   : C:/msys64/mingw64/lib/libjsoncpp.dll.a
+-- Jsoncpp prefix: json
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - found
+-- Found Threads: TRUE
+-- Threads:
+-- Found argtable: C:/msys64/mingw64/include
+-- Argtable header: C:/msys64/mingw64/include
+-- Argtable lib   : C:/msys64/mingw64/lib/libargtable2.a
+-- Found CURL: C:/msys64/mingw64/include
+-- CURL header: C:/msys64/mingw64/include
+-- CURL lib   : C:/msys64/mingw64/lib/libcurl.dll.a
+-- Found mhd: C:/msys64/mingw64/include
+-- MHD header: C:/msys64/mingw64/include
+-- MHD lib   : C:/msys64/mingw64/lib/libmicrohttpd.dll.a
+-- Found Doxygen: C:/Program Files/doxygen/bin/doxygen.exe (found version "1.8.15") found components:  doxygen missing components:  dot
+-- Found doxygen: C:/Program Files/doxygen/bin/doxygen.exe
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    HUNTER_ENABLED
+    REDIS_CLIENT
+    REDIS_SERVER
+
+
+-- Build files have been written to: C:/msys64/home/Renegade/libjson-rpc-cpp
+Scanning dependencies of target jsonrpccommon
+[  1%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommon.dir/common/errors.cpp.obj
+[  3%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommon.dir/common/exception.cpp.obj
+[  5%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommon.dir/common/procedure.cpp.obj
+[  6%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommon.dir/common/specificationparser.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:21:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromFile(const std::string& filename)    throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:22:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromString(const std::string& spec)      throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:18:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ vector<Procedure>   SpecificationParser::GetProceduresFromFile  (const string &filename) throw(JsonRpcException)
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:24:89: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ vector<Procedure>   SpecificationParser::GetProceduresFromString(const string &content) throw(JsonRpcException)
+                                                                                         ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp: In static member function 'static std::vector<jsonrpc::Procedure> jsonrpc::SpecificationParser::GetProceduresFromString(const string&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:27:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+[  8%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommon.dir/common/specificationwriter.cpp.obj
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationwriter.cpp: In static member function 'static std::__cxx11::string jsonrpc::SpecificationWriter::toString(const std::vector<jsonrpc::Procedure>&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationwriter.cpp:33:24: warning: 'StyledWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+     Json::StyledWriter wr;
+                        ^~
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationwriter.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationwriter.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:222:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API StyledWriter : public Writer {
+                                                                      ^~~~~~~~~~~~
+[ 10%] Linking CXX shared library ../../bin/libjsonrpccpp-common.dll
+[ 10%] Built target jsonrpccommon
+Scanning dependencies of target jsonrpccommonStatic
+[ 12%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommonStatic.dir/common/errors.cpp.obj
+[ 13%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommonStatic.dir/common/exception.cpp.obj
+[ 15%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommonStatic.dir/common/procedure.cpp.obj
+[ 17%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommonStatic.dir/common/specificationparser.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:21:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromFile(const std::string& filename)    throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:22:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromString(const std::string& spec)      throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:18:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ vector<Procedure>   SpecificationParser::GetProceduresFromFile  (const string &filename) throw(JsonRpcException)
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:24:89: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ vector<Procedure>   SpecificationParser::GetProceduresFromString(const string &content) throw(JsonRpcException)
+                                                                                         ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp: In static member function 'static std::vector<jsonrpc::Procedure> jsonrpc::SpecificationParser::GetProceduresFromString(const string&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:27:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+[ 18%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpccommonStatic.dir/common/specificationwriter.cpp.obj
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationwriter.cpp: In static member function 'static std::__cxx11::string jsonrpc::SpecificationWriter::toString(const std::vector<jsonrpc::Procedure>&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationwriter.cpp:33:24: warning: 'StyledWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+     Json::StyledWriter wr;
+                        ^~
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationwriter.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationwriter.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:222:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API StyledWriter : public Writer {
+                                                                      ^~~~~~~~~~~~
+[ 20%] Linking CXX static library ../../lib/libjsonrpccpp-common.a
+[ 20%] Built target jsonrpccommonStatic
+Scanning dependencies of target jsonrpcclientStatic
+[ 22%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclientStatic.dir/client/batchcall.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:23:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw(JsonRpcException) = 0;
+                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:33:122: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallMethod          (const std::string &name, const Json::Value &parameter, Json::Value& result) throw (JsonRpcException);
+                                                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:34:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value CallMethod          (const std::string &name, const Json::Value &parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:36:98: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void           CallProcedures      (const BatchCall &calls, BatchResponse &response) throw (JsonRpcException);
+                                                                                                  ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:37:73: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             BatchResponse  CallProcedures      (const BatchCall &calls) throw (JsonRpcException);
+                                                                         ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:39:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallNotification    (const std::string& name, const Json::Value& parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:53:83: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void HandleResponse(const std::string &response, Json::Value &result) throw (JsonRpcException);
+                                                                                   ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:61:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value HandleResponse(const Json::Value &response, Json::Value &result) throw (JsonRpcException);
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp: In member function 'std::__cxx11::string jsonrpc::BatchCall::toString(bool) const':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:44:26: warning: 'FastWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+         Json::FastWriter writer;
+                          ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:163:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API FastWriter : public Writer {
+                                                                      ^~~~~~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:49:28: warning: 'StyledWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+         Json::StyledWriter writer;
+                            ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:222:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API StyledWriter : public Writer {
+                                                                      ^~~~~~~~~~~~
+[ 24%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclientStatic.dir/client/batchresponse.cpp.obj
+[ 25%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclientStatic.dir/client/client.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:23:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw(JsonRpcException) = 0;
+                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:33:122: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallMethod          (const std::string &name, const Json::Value &parameter, Json::Value& result) throw (JsonRpcException);
+                                                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:34:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value CallMethod          (const std::string &name, const Json::Value &parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:36:98: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void           CallProcedures      (const BatchCall &calls, BatchResponse &response) throw (JsonRpcException);
+                                                                                                  ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:37:73: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             BatchResponse  CallProcedures      (const BatchCall &calls) throw (JsonRpcException);
+                                                                         ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:39:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallNotification    (const std::string& name, const Json::Value& parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:53:83: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void HandleResponse(const std::string &response, Json::Value &result) throw (JsonRpcException);
+                                                                                   ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:61:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value HandleResponse(const Json::Value &response, Json::Value &result) throw (JsonRpcException);
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:26:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void Client::CallMethod(const std::string &name, const Json::Value &parameter, Json::Value& result) throw(JsonRpcException)
+                                                                                                     ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:34:76: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void Client::CallProcedures(const BatchCall &calls, BatchResponse &result) throw(JsonRpcException)
+                                                                            ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp: In member function 'void jsonrpc::Client::CallProcedures(const jsonrpc::BatchCall&, jsonrpc::BatchResponse&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:39:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/errors.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/exception.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:14,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp: At global scope:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:67:62: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ BatchResponse Client::CallProcedures(const BatchCall &calls) throw(JsonRpcException)
+                                                              ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:74:87: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ Json::Value Client::CallMethod(const std::string& name, const Json::Value& parameter) throw(JsonRpcException)
+                                                                                       ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:81:86: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void Client::CallNotification(const std::string& name, const Json::Value& parameter) throw(JsonRpcException)
+                                                                                      ^~~~~
+[ 27%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclientStatic.dir/client/rpcprotocolclient.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:23:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw(JsonRpcException) = 0;
+                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:33:122: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallMethod          (const std::string &name, const Json::Value &parameter, Json::Value& result) throw (JsonRpcException);
+                                                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:34:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value CallMethod          (const std::string &name, const Json::Value &parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:36:98: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void           CallProcedures      (const BatchCall &calls, BatchResponse &response) throw (JsonRpcException);
+                                                                                                  ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:37:73: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             BatchResponse  CallProcedures      (const BatchCall &calls) throw (JsonRpcException);
+                                                                         ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:39:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallNotification    (const std::string& name, const Json::Value& parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:53:83: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void HandleResponse(const std::string &response, Json::Value &result) throw (JsonRpcException);
+                                                                                   ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:61:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value HandleResponse(const Json::Value &response, Json::Value &result) throw (JsonRpcException);
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp: In member function 'void jsonrpc::RpcProtocolClient::BuildRequest(const string&, const Json::Value&, std::__cxx11::string&, bool)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:34:22: warning: 'FastWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+     Json::FastWriter writer;
+                      ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/errors.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/exception.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:163:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API FastWriter : public Writer {
+                                                                      ^~~~~~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp: At global scope:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:39:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void RpcProtocolClient::HandleResponse(const std::string &response, Json::Value& result) throw(JsonRpcException)
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp: In member function 'void jsonrpc::RpcProtocolClient::HandleResponse(const string&, Json::Value&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:41:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/errors.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/exception.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp: At global scope:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:53:94: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ Json::Value RpcProtocolClient::HandleResponse(const Json::Value &value, Json::Value &result) throw(JsonRpcException)
+                                                                                              ^~~~~
+[ 29%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclientStatic.dir/client/connectors/httpclient.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:23:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw(JsonRpcException) = 0;
+                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.h:23:48: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             HttpClient(const std::string& url) throw (JsonRpcException);
+                                                ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.h:25:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw (JsonRpcException);
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.cpp:56:48: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ HttpClient::HttpClient(const std::string& url) throw(JsonRpcException)
+                                                ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.cpp:68:82: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void HttpClient::SendRPCMessage(const std::string& message, std::string& result) throw (JsonRpcException)
+                                                                                  ^~~~~
+[ 31%] Linking CXX static library ../../lib/libjsonrpccpp-client.a
+[ 31%] Built target jsonrpcclientStatic
+Scanning dependencies of target jsonrpcclient
+[ 32%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclient.dir/client/batchcall.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:23:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw(JsonRpcException) = 0;
+                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:33:122: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallMethod          (const std::string &name, const Json::Value &parameter, Json::Value& result) throw (JsonRpcException);
+                                                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:34:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value CallMethod          (const std::string &name, const Json::Value &parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:36:98: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void           CallProcedures      (const BatchCall &calls, BatchResponse &response) throw (JsonRpcException);
+                                                                                                  ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:37:73: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             BatchResponse  CallProcedures      (const BatchCall &calls) throw (JsonRpcException);
+                                                                         ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:39:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallNotification    (const std::string& name, const Json::Value& parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:53:83: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void HandleResponse(const std::string &response, Json::Value &result) throw (JsonRpcException);
+                                                                                   ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:61:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value HandleResponse(const Json::Value &response, Json::Value &result) throw (JsonRpcException);
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp: In member function 'std::__cxx11::string jsonrpc::BatchCall::toString(bool) const':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:44:26: warning: 'FastWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+         Json::FastWriter writer;
+                          ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:163:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API FastWriter : public Writer {
+                                                                      ^~~~~~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:49:28: warning: 'StyledWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+         Json::StyledWriter writer;
+                            ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/batchcall.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:222:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API StyledWriter : public Writer {
+                                                                      ^~~~~~~~~~~~
+[ 34%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclient.dir/client/batchresponse.cpp.obj
+[ 36%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclient.dir/client/client.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:23:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw(JsonRpcException) = 0;
+                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:33:122: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallMethod          (const std::string &name, const Json::Value &parameter, Json::Value& result) throw (JsonRpcException);
+                                                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:34:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value CallMethod          (const std::string &name, const Json::Value &parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:36:98: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void           CallProcedures      (const BatchCall &calls, BatchResponse &response) throw (JsonRpcException);
+                                                                                                  ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:37:73: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             BatchResponse  CallProcedures      (const BatchCall &calls) throw (JsonRpcException);
+                                                                         ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:39:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallNotification    (const std::string& name, const Json::Value& parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:11:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:53:83: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void HandleResponse(const std::string &response, Json::Value &result) throw (JsonRpcException);
+                                                                                   ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:61:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value HandleResponse(const Json::Value &response, Json::Value &result) throw (JsonRpcException);
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:26:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void Client::CallMethod(const std::string &name, const Json::Value &parameter, Json::Value& result) throw(JsonRpcException)
+                                                                                                     ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:34:76: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void Client::CallProcedures(const BatchCall &calls, BatchResponse &result) throw(JsonRpcException)
+                                                                            ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp: In member function 'void jsonrpc::Client::CallProcedures(const jsonrpc::BatchCall&, jsonrpc::BatchResponse&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:39:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/errors.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/exception.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:14,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp: At global scope:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:67:62: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ BatchResponse Client::CallProcedures(const BatchCall &calls) throw(JsonRpcException)
+                                                              ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:74:87: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ Json::Value Client::CallMethod(const std::string& name, const Json::Value& parameter) throw(JsonRpcException)
+                                                                                       ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.cpp:81:86: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void Client::CallNotification(const std::string& name, const Json::Value& parameter) throw(JsonRpcException)
+                                                                                      ^~~~~
+[ 37%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclient.dir/client/rpcprotocolclient.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:23:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw(JsonRpcException) = 0;
+                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:33:122: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallMethod          (const std::string &name, const Json::Value &parameter, Json::Value& result) throw (JsonRpcException);
+                                                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:34:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value CallMethod          (const std::string &name, const Json::Value &parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:36:98: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void           CallProcedures      (const BatchCall &calls, BatchResponse &response) throw (JsonRpcException);
+                                                                                                  ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:37:73: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             BatchResponse  CallProcedures      (const BatchCall &calls) throw (JsonRpcException);
+                                                                         ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/client.h:39:101: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void        CallNotification    (const std::string& name, const Json::Value& parameter) throw (JsonRpcException);
+                                                                                                     ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:53:83: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             void HandleResponse(const std::string &response, Json::Value &result) throw (JsonRpcException);
+                                                                                   ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:61:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             Json::Value HandleResponse(const Json::Value &response, Json::Value &result) throw (JsonRpcException);
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp: In member function 'void jsonrpc::RpcProtocolClient::BuildRequest(const string&, const Json::Value&, std::__cxx11::string&, bool)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:34:22: warning: 'FastWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+     Json::FastWriter writer;
+                      ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/errors.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/exception.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:163:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API FastWriter : public Writer {
+                                                                      ^~~~~~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp: At global scope:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:39:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void RpcProtocolClient::HandleResponse(const std::string &response, Json::Value& result) throw(JsonRpcException)
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp: In member function 'void jsonrpc::RpcProtocolClient::HandleResponse(const string&, Json::Value&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:41:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/errors.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/exception.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp: At global scope:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/rpcprotocolclient.cpp:53:94: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ Json::Value RpcProtocolClient::HandleResponse(const Json::Value &value, Json::Value &result) throw(JsonRpcException)
+                                                                                              ^~~~~
+[ 39%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcclient.dir/client/connectors/httpclient.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/iclientconnector.h:23:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw(JsonRpcException) = 0;
+                                                                                          ^~~~~
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.cpp:10:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.h:23:48: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             HttpClient(const std::string& url) throw (JsonRpcException);
+                                                ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.h:25:90: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             virtual void SendRPCMessage(const std::string& message, std::string& result) throw (JsonRpcException);
+                                                                                          ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.cpp:56:48: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ HttpClient::HttpClient(const std::string& url) throw(JsonRpcException)
+                                                ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/client/connectors/httpclient.cpp:68:82: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+ void HttpClient::SendRPCMessage(const std::string& message, std::string& result) throw (JsonRpcException)
+                                                                                  ^~~~~
+[ 41%] Linking CXX shared library ../../bin/libjsonrpccpp-client.dll
+[ 41%] Built target jsonrpcclient
+Scanning dependencies of target jsonrpcserver
+[ 43%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserver.dir/server/abstractprotocolhandler.cpp.obj
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp: In member function 'virtual void jsonrpc::AbstractProtocolHandler::HandleRequest(const string&, std::__cxx11::string&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp:35:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp:38:22: warning: 'FastWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+     Json::FastWriter w;
+                      ^
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:163:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API FastWriter : public Writer {
+                                                                      ^~~~~~~~~~
+[ 44%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserver.dir/server/abstractserverconnector.cpp.obj
+[ 46%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserver.dir/server/requesthandlerfactory.cpp.obj
+[ 48%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserver.dir/server/rpcprotocolserver12.cpp.obj
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp: In member function 'virtual void jsonrpc::RpcProtocolServer12::HandleRequest(const string&, std::__cxx11::string&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp:29:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp:32:22: warning: 'FastWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+     Json::FastWriter w;
+                      ^
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:163:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API FastWriter : public Writer {
+                                                                      ^~~~~~~~~~
+[ 50%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserver.dir/server/rpcprotocolserverv1.cpp.obj
+[ 51%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserver.dir/server/rpcprotocolserverv2.cpp.obj
+[ 53%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserver.dir/server/connectors/httpserver.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/connectors/httpserver.cpp:14:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:21:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromFile(const std::string& filename)    throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:22:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromString(const std::string& spec)      throw (JsonRpcException);
+                                                                                                 ^~~~~
+[ 55%] Linking CXX shared library ../../bin/libjsonrpccpp-server.dll
+[ 55%] Built target jsonrpcserver
+Scanning dependencies of target jsonrpcserverStatic
+[ 56%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserverStatic.dir/server/abstractprotocolhandler.cpp.obj
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp: In member function 'virtual void jsonrpc::AbstractProtocolHandler::HandleRequest(const string&, std::__cxx11::string&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp:35:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp:38:22: warning: 'FastWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+     Json::FastWriter w;
+                      ^
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:163:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API FastWriter : public Writer {
+                                                                      ^~~~~~~~~~
+[ 58%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserverStatic.dir/server/abstractserverconnector.cpp.obj
+[ 60%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserverStatic.dir/server/requesthandlerfactory.cpp.obj
+[ 62%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserverStatic.dir/server/rpcprotocolserver12.cpp.obj
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp: In member function 'virtual void jsonrpc::RpcProtocolServer12::HandleRequest(const string&, std::__cxx11::string&)':
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp:29:18: warning: 'Reader' is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+     Json::Reader reader;
+                  ^~~~~~
+In file included from C:/msys64/mingw64/include/json/json.h:11,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp:10:
+C:/msys64/mingw64/include/json/reader.h:35:83: note: declared here
+ class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+                                                                                   ^~~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp:32:22: warning: 'FastWriter' is deprecated: Use StreamWriterBuilder instead [-Wdeprecated-declarations]
+     Json::FastWriter w;
+                      ^
+In file included from C:/msys64/mingw64/include/json/json.h:12,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/gen/jsonrpccpp/common/jsonparser.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/procedure.h:16,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/abstractprotocolhandler.h:17,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.h:13,
+                 from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/rpcprotocolserver12.cpp:10:
+C:/msys64/mingw64/include/json/writer.h:163:70: note: declared here
+ class JSONCPP_DEPRECATED("Use StreamWriterBuilder instead") JSON_API FastWriter : public Writer {
+                                                                      ^~~~~~~~~~
+[ 63%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserverStatic.dir/server/rpcprotocolserverv1.cpp.obj
+[ 65%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserverStatic.dir/server/rpcprotocolserverv2.cpp.obj
+[ 67%] Building CXX object src/jsonrpccpp/CMakeFiles/jsonrpcserverStatic.dir/server/connectors/httpserver.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/server/connectors/httpserver.cpp:14:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:21:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromFile(const std::string& filename)    throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:22:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromString(const std::string& spec)      throw (JsonRpcException);
+                                                                                                 ^~~~~
+[ 68%] Linking CXX static library ../../lib/libjsonrpccpp-server.a
+[ 68%] Built target jsonrpcserverStatic
+Scanning dependencies of target libjsonrpcstubStatic
+[ 70%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstubStatic.dir/client/cppclientstubgenerator.cpp.obj
+[ 72%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstubStatic.dir/client/jsclientstubgenerator.cpp.obj
+[ 74%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstubStatic.dir/codegenerator.cpp.obj
+[ 75%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstubStatic.dir/helper/cpphelper.cpp.obj
+[ 77%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstubStatic.dir/server/cppserverstubgenerator.cpp.obj
+[ 79%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstubStatic.dir/stubgenerator.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/stubgenerator/stubgenerator.cpp:12:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:21:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromFile(const std::string& filename)    throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:22:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromString(const std::string& spec)      throw (JsonRpcException);
+                                                                                                 ^~~~~
+[ 81%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstubStatic.dir/stubgeneratorfactory.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/stubgenerator/stubgeneratorfactory.cpp:17:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:21:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromFile(const std::string& filename)    throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:22:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromString(const std::string& spec)      throw (JsonRpcException);
+                                                                                                 ^~~~~
+[ 82%] Linking CXX static library ../../lib/libjsonrpccpp-stub.a
+[ 82%] Built target libjsonrpcstubStatic
+Scanning dependencies of target libjsonrpcstub
+[ 84%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstub.dir/client/cppclientstubgenerator.cpp.obj
+[ 86%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstub.dir/client/jsclientstubgenerator.cpp.obj
+[ 87%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstub.dir/codegenerator.cpp.obj
+[ 89%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstub.dir/helper/cpphelper.cpp.obj
+[ 91%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstub.dir/server/cppserverstubgenerator.cpp.obj
+[ 93%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstub.dir/stubgenerator.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/stubgenerator/stubgenerator.cpp:12:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:21:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromFile(const std::string& filename)    throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:22:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromString(const std::string& spec)      throw (JsonRpcException);
+                                                                                                 ^~~~~
+[ 94%] Building CXX object src/stubgenerator/CMakeFiles/libjsonrpcstub.dir/stubgeneratorfactory.cpp.obj
+In file included from C:/msys64/home/Renegade/libjson-rpc-cpp/src/stubgenerator/stubgeneratorfactory.cpp:17:
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:21:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromFile(const std::string& filename)    throw (JsonRpcException);
+                                                                                                 ^~~~~
+C:/msys64/home/Renegade/libjson-rpc-cpp/src/jsonrpccpp/common/specificationparser.h:22:97: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+             static std::vector<Procedure> GetProceduresFromString(const std::string& spec)      throw (JsonRpcException);
+                                                                                                 ^~~~~
+[ 96%] Linking CXX shared library ../../bin/libjsonrpccpp-stub.dll
+[ 96%] Built target libjsonrpcstub
+Scanning dependencies of target jsonrpcstub
+[ 98%] Building CXX object src/stubgenerator/CMakeFiles/jsonrpcstub.dir/main.cpp.obj
+[100%] Linking CXX executable ../../bin/jsonrpcstub.exe
+[100%] Built target jsonrpcstub
+[ 10%] Built target jsonrpccommon
+[ 20%] Built target jsonrpccommonStatic
+[ 31%] Built target jsonrpcclientStatic
+[ 41%] Built target jsonrpcclient
+[ 55%] Built target jsonrpcserver
+[ 68%] Built target jsonrpcserverStatic
+[ 82%] Built target libjsonrpcstubStatic
+[ 96%] Built target libjsonrpcstub
+[100%] Built target jsonrpcstub
+Install the project...
+-- Install configuration: ""
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/version.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/common/jsonparser.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/client.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/server.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/common/errors.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/common/exception.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/common/procedure.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/common/specification.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/common/specificationparser.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/common/specificationwriter.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/client/batchcall.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/client/batchresponse.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/client/client.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/client/iclientconnector.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/server/abstractserver.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/server/abstractserverconnector.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/server/iclientconnectionhandler.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/server/iprocedureinvokationhandler.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/server/requesthandlerfactory.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/client/connectors/httpclient.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/server/connectors/httpserver.h
+-- Up-to-date: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/./include
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/libjsonrpccpp-common.dll.a
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/bin/libjsonrpccpp-common.dll
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/libjsonrpccpp-client.dll.a
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/bin/libjsonrpccpp-client.dll
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/libjsonrpccpp-server.dll.a
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/bin/libjsonrpccpp-server.dll
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/libjsonrpccpp-common.a
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/libjsonrpccpp-client.a
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/libjsonrpccpp-server.a
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/pkgconfig/libjsonrpccpp-server.pc
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/pkgconfig/libjsonrpccpp-client.pc
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/pkgconfig/libjsonrpccpp-common.pc
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/pkgconfig/libjsonrpccpp-stub.pc
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/client
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/client/cppclientstubgenerator.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/client/jsclientstubgenerator.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/jsonrpcstub.dir
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/libjsonrpcstub.dir
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/libjsonrpcstub.dir/client
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/libjsonrpcstub.dir/helper
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/libjsonrpcstub.dir/server
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/libjsonrpcstubStatic.dir
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/libjsonrpcstubStatic.dir/client
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/libjsonrpcstubStatic.dir/helper
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/CMakeFiles/libjsonrpcstubStatic.dir/server
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/codegenerator.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/helper
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/helper/cpphelper.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/server
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/server/cppserverstubgenerator.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/servertemplate.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/stubgenerator.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/stubgeneratorfactory.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/include/jsonrpccpp/stubgen/stubhelper.h
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/libjsonrpccpp-stub.dll.a
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/bin/libjsonrpccpp-stub.dll
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/lib/libjsonrpccpp-stub.a
+-- Installing: C:/msys64/home/Renegade/libjson-rpc-cpp/dist/bin/jsonrpcstub.exe
+libtoolize: putting auxiliary files in '.'.
+libtoolize: linking file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: linking file 'm4/libtool.m4'
+libtoolize: linking file 'm4/ltoptions.m4'
+libtoolize: linking file 'm4/ltsugar.m4'
+libtoolize: linking file 'm4/ltversion.m4'
+libtoolize: linking file 'm4/lt~obsolete.m4'
+sh: -c: line 0: syntax error near unexpected token `('
+sh: -c: line 0: `C:\Program Files (x86)\GnuWin32\bin --help 2>/dev/null'
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+sh: -c: line 0: syntax error near unexpected token `('
+sh: -c: line 0: `C:\Program Files (x86)\GnuWin32\bin --add-missing --copy'
+autoreconf: C:\Program failed with exit status: 1
+configure: loading site script /mingw64/etc/config.site
+configure: error: cannot find install-sh, install.sh, or shtool in "." "./.." "./../.."
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'install'.  Stop.
