@@ -17,9 +17,16 @@ You will need several files.
 - stubgeneratorfactory.cpp
 - stubgeneratorfactory.h
 
-Download them [here]().
+Download them [here](libxayagame-compiler-files.zip).
 
-Copy all those files into C:\msys64\home\&lt;username&gt:\. Do not copy into a subfolder. The files must be in the "username" folder. 
+Copy all those files into C:\msys64\home\&lt;username&gt:\. Do not copy into a subfolder. The files must be in the "username" folder. These files:
+
+- libglog.pc
+- lmdb.pc
+- stubgeneratorfactory.cpp
+- stubgeneratorfactory.h
+
+Are automatically deleted once they are no longer needed. If you need to start over, make certain to copy them to your username folder again. 
 
 Copy the following code block to your clipboard **without the comment lines**. Make certain that you copy it exactly with no blank lines at the end. 
 
