@@ -45,7 +45,7 @@ In MSYS2, press SHIFT+INSERT to paste and run that. The code block above will ru
 
 If it doesn't work, copy the code block above into a text editor and ensure that there is no blank line at the bottom. Next, select all then copy it again and paste into MSYS2 as above. Here's a screenshot of it pasted into a text editor. Note the cursor position and the lack of whitespace at the end. 
 
-![No whitespace](No-blank-lines-note-cursor.png)
+![No whitespace](img/No-blank-lines-note-cursor.png)
 
 You will see the following message:
 
