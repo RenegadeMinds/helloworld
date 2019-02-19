@@ -47,12 +47,12 @@ If it doesn't work, copy the code block above into a text editor and ensure that
 
 ![No whitespace](img/No-blank-lines-note-cursor.png)
 
-You will see the following message:
+When the code block runs, you will see the following message:
 
 	warning: terminate MSYS2 without returning to shell and check for updates again
 	warning: for example close your terminal window instead of calling exit
 
-Click the X in the upper-right corner to close MSYS2 then click OK.
+Sometimes life is messy and we must accept our fate. Click the X in the upper-right corner to close MSYS2 then click OK. 
 
 ![Click OK](img/click-ok.png)
 
@@ -62,7 +62,7 @@ Again, paste in the same code block from above using SHIFT+INSERT.
 
 Wait for everything to install, then close and reopen MSYS2.
 
-Similar to how you copied the code block above exactly and without the comment lines and with no additional blank lines at the end, copy the following code block. Note that there is 1 blank line after "!" that should be copied, but not more than that. 
+Similar to how you copied the code block above exactly and without the comment lines and with no additional blank lines at the end, copy the following code block. Note that there is 1 blank line after "!" that should be copied, but not more than that. You can select from top to bottom and then press SHIFT+LEFT_RIGHT_ARROW to adjust the selection. Test it in a text editor. 
 
 	/***********************/
 	./install_xaya_2.sh <<!
