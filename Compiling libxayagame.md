@@ -79,5 +79,25 @@ Paste it into MSYS2 as you did above by pressing SHIFT+INSERT. Wait for the scri
 
 Congratulations! You've just built your own GSP using libxayagame. You can now proceed on to the Hello World in C++ tutorial.
 
+# Trouble Shooting
 
+As mentioned above, copying and pasting must be done with the proper white space. You may need to copy into a text editor and delete a trailing space or line break. 
+
+## Gnu32
+
+Some GNU tools may cause the compilation to fail. You may need to uninstall these entirely, and then delete all references to "GnuWin32" in the Windows Registry. To do that:
+
+1. Open up regedit.exe 
+1. Click Edit > Find...
+1. Type in GnuWin32
+1. Check:
+	1. Keys
+	1. Values
+	1. Data
+1. Click Find Next
+1. Verify that the registry entry should be deleted, then delete it
+1. Press F3 to find the next "GnuWin32" entry
+1. Repeat steps #6 and #7
+
+Once you've cleaned all the GNU entries from the registry, open a new MSYS2 (64-bit) window and try again from where it failed above. You may need to entirely start over, but it shouldn't be necessary. 
 
