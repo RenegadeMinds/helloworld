@@ -47,11 +47,11 @@ In order to connect to the daemon, we need several variables.
 - storage_type: The type of storage to use for game data  (memory, sqlite or lmdb)
 - datadir: base data directory for game data (will be extended by the game ID and chain); must be set if --storage_type is not memory
 
-	DEFINE_string (xaya_rpc_url, "http://127.0.0.1", "");
-	DEFINE_int32 (game_rpc_port, 8900, "");
-	DEFINE_int32 (enable_pruning, -1, "");
-	DEFINE_string (storage_type, "memory", "");
-	DEFINE_string (datadir, "", "");
+		DEFINE_string (xaya_rpc_url, "http://127.0.0.1", "");
+		DEFINE_int32 (game_rpc_port, 8900, "");
+		DEFINE_int32 (enable_pruning, -1, "");
+		DEFINE_string (storage_type, "memory", "");
+		DEFINE_string (datadir, "", "");
 
 Copy and paste that into your helloworld.cpp file under the includes.
 
@@ -64,6 +64,7 @@ Our `HelloWorld` class inherits from `xaya::CachingGame`. Let's add it.
 	class HelloWorld : public xaya::CachingGame
 	{
 		protected:
+	}
 
 We're going to add 3 methods to this class.
 
@@ -89,7 +90,9 @@ In there we get our GameStateData into a string buffer, then store it in a JSON 
 
 # Write the GetInitialStateInternal Method
 
-Next, our `GetInitialStateInternal` is similarly quite easy. Start writing that method as shown below.
+Next, our `GetInitialStateInternal` is similarly quite easy. It decides which network to run on and which block to start at. It's only ever used once, but it's critical to get it right. 
+
+Start writing that method as shown below.
 
 	  xaya::GameStateData
 	  GetInitialStateInternal (unsigned& height, std::string& hashHex) override
@@ -113,6 +116,8 @@ In `GetInitialStateInternal` we'll decide which chain our Hello World game will 
       default:
         LOG (FATAL) << "Invalid chain: " << static_cast<int> (GetChain ());
       }
+
+# **INSERT DESCRIPTION OF GETCHAIN() HERE AND EXPLAIN HOW THE CHAIN IS DETERMINED. **
 
 Once we've decided, we'll set the height and hashHex values. The height is the block height that we want our game to start at. This should be the highest possible block height that is prior to any moves being made in our game. The hashHex is the block hash for that block. You can look up the block hash at https://explorer.xaya.io/. We're going to start our game at [block 555,555](https://explorer.xaya.io/block/555555). 
 
@@ -222,13 +227,80 @@ Congratulations! We're finished our `HelloWorld` class and can move on to `main`
 
 # Write the main Method
 
+Our main method will be written outside of the anonymous namespace. Wire it up as usual.
 
+	int main (int argc, char** argv)
+	{ }
 
+## Set Logging
 
+If you remember the glog include way up above, we're going to start using that now. Add logging as shown below. 
 
+	  google::InitGoogleLogging (argv[0]);
 
+`argv[0]` is the FLAGS_xaya_rpc_url URL, so glog will send output to libxayagame, which in turn will feed our console the logging output. 
 
+## Set Flags
 
+We must also set our flags. If you remember from above, we included gflags. We'll use that to parse command line arguments into our flags, i.e.:
 
+- FLAGS_xaya_rpc_url
+- FLAGS_game_rpc_port
+- FLAGS_enable_pruning
+- FLAGS_storage_type
+- FLAGS_datadir
+
+You can do that manually, or you can use gflags. Go ahead and write code to parse command line arguments for our flags, or copy and paste in the following code.
+
+	  gflags::SetUsageMessage ("Run HelloWorld game daemon");
+	  gflags::SetVersionString ("1.0");
+	  gflags::ParseCommandLineFlags (&argc, &argv, true);
+
+The flags we listed above are now populated with the appropriate values. 
+
+## Check for Errors
+
+We must check for some errors. 
+
+We must have a correct RPC URL. You can write code to do thorough error checking or copy and paste the basic check here.
+
+	  if (FLAGS_xaya_rpc_url.empty ())
+		{
+		  std::cerr << "Error: --xaya_rpc_url must be set" << std::endl;
+		  return EXIT_FAILURE;
+		}
+
+libxayagame can use 3 different types of storage:
+
+- Memory
+- SQLite
+- lmdb
+
+Memory doesn't require a data directory, but the other 2 do. Let's check for an error there. The strings for each are as above, but lower case. 
+
+	  if (FLAGS_datadir.empty () && FLAGS_storage_type != "memory")
+		{
+		  std::cerr << "Error: --datadir must be specified for non-memory storage"
+					<< std::endl;
+		  return EXIT_FAILURE;
+		}
+
+libxayagame expects a configuration. Copy and paste the following.
+
+	xaya::GameDaemonConfiguration config;
+
+We'll fill the configuration with data from our flags. 
+
+```c
+	  config.XayaRpcUrl = FLAGS_xaya_rpc_url;
+	  if (FLAGS_game_rpc_port != 0)
+		{
+		  config.GameRpcServer = xaya::RpcServerType::HTTP;
+		  config.GameRpcPort = FLAGS_game_rpc_port;
+		}
+	  config.EnablePruning = FLAGS_enable_pruning;
+	  config.StorageType = FLAGS_storage_type;
+	  config.DataDirectory = FLAGS_datadir;
+```
 
 
