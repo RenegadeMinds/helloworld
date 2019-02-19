@@ -1,10 +1,10 @@
 # Hello World C++
 
-In this tutorial we're going to build a Hello World console application in C++. 
+In this tutorial we're going to build a Hello World console application in C++ from scratch. 
 
 Our application will connect to libxayagame, which will return results for us. In another command prompt or terminal, we'll send moves to the game and retrieve the results. 
 
-Download the code here. 
+Download the code and ancillary files [here](helloworld.zip). There are some extra files to help with compilation and running for people that need them. 
 
 # Create helloworld.cpp and Add Includes
 
@@ -287,11 +287,13 @@ Memory doesn't require a data directory, but the other 2 do. Let's check for an 
 		}
 ```
 
+## Wire Up and Set a Daemon Configuration
+
 libxayagame expects a configuration. Copy and paste the following.
 
 	xaya::GameDaemonConfiguration config;
 
-We'll fill the configuration with data from our flags. 
+We'll fill the configuration with data from our flags. Write code to fill the flags or copy and paste the following into your main method. 
 
 ```c++
 	  config.XayaRpcUrl = FLAGS_xaya_rpc_url;
@@ -304,5 +306,56 @@ We'll fill the configuration with data from our flags.
 	  config.StorageType = FLAGS_storage_type;
 	  config.DataDirectory = FLAGS_datadir;
 ```
+
+**NOTE:** The configuration requires an RPC server type. It is set as follows. 
+
+	config.GameRpcServer = xaya::RpcServerType::HTTP;
+
+## Instantiate an Instance of Your HelloWorld Class
+
+It's time to put our HelloWorld class to work. Instantiate an instance of it now. 
+
+	  HelloWorld logic;
+
+## libxayagame Startup Checklist	  
+
+We need 3 things to start libxayagame:
+
+1. A daemon configuration
+1. A game name
+1. Game logic
+
+We created the **daemon configuration** through the command line arguments that we parsed into flags. 
+
+Our game name is **"helloworld"**.
+
+Our game logic is our **`HelloWorld` class**.
+
+## Start libxayagame
+
+Copy and paste the following at the end of your main method.
+
+	  const int res = xaya::DefaultMain (config, "helloworld", logic);
+	  return res;
+
+Connecting to libxayagame is a blocking operation, so `return res;` will never be reached unless the user presses CTRL+C. 
+
+CONGRATULATIONS! You can now compile and run your helloworld application. It will run like a daemon now. 
+
+# Compile HelloWorld
+
+
+
+
+# Run HelloWorld
+
+
+
+
+
+
+If you want to make a move, read on!
+
+# Making Moves in HelloWorld
 
 
