@@ -44,7 +44,7 @@ Close MSYS2 and run it again as you did above.
 
 Again, paste in the code block from above using SHIFT+INSERT. 
 
-Wait for everything to install, then close and reopen MSYS2. 
+Wait for everything to install, then close and reopen MSYS2.  
 
 Similar to how you copied the code block above exactly and with no blank lines at the end, copy the following code block.
 
