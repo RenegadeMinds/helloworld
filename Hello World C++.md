@@ -291,7 +291,7 @@ libxayagame expects a configuration. Copy and paste the following.
 
 We'll fill the configuration with data from our flags. 
 
-```c
+```c++
 	  config.XayaRpcUrl = FLAGS_xaya_rpc_url;
 	  if (FLAGS_game_rpc_port != 0)
 		{
