@@ -52,7 +52,7 @@ You will see the following message:
 
 Click the X in the upper-right corner to close MSYS2 then click OK.
 
-![Click OK](click-ok.png)
+![Click OK](img/click-ok.png)
 
 Run MSYS2 again as you did above. 
 
