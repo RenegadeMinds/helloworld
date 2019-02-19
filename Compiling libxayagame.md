@@ -55,6 +55,8 @@ Y
 
 /************************/
 
+Paste it into MSYS2 as you did above by pressing SHIFT+INSERT. Wait for the script to finish. 
+
 Congratulations! You've just built your own GSP using libxayagame. You can now proceed on to the Hello World in C++ tutorial.
 
 
