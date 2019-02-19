@@ -12,6 +12,8 @@ Install into default path `C:/msys64` then run MSYS2 (the 64-bit version and **N
 
 You will need several files. 
 
+- input1.txt
+- input2.txt
 - install_xaya_1.sh
 - install_xaya_2.sh
 - libglog.pc
