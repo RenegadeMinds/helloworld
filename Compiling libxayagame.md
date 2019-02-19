@@ -62,7 +62,7 @@ Again, paste in the same code block from above using SHIFT+INSERT.
 
 Wait for everything to install, then close and reopen MSYS2.
 
-Similar to how you copied the code block above exactly and without the comment lines and with no additional blank lines at the end, copy the following code block. Note that there is 1 blank line after "!" that should be copied, but not more than that. You can select from top to bottom and then press SHIFT+LEFT_RIGHT_ARROW to adjust the selection. Test it in a text editor. 
+Similar to how you copied the code block above exactly and without the comment lines and with no additional blank lines at the end, copy the following code block. 
 
 	/***********************/
 	./install_xaya_2.sh <<!
@@ -70,6 +70,10 @@ Similar to how you copied the code block above exactly and without the comment l
 	!
 
 	/************************/
+
+Note that there is 1 blank line after "!" that should be copied, but not more than that. You can select from top to bottom and then press SHIFT+LEFT_RIGHT_ARROW to adjust the selection. Test it in a text editor. Here's a screenshot. Note the cursor position.
+
+![Second copy paste](img/second-copy-paste.png)
 
 Paste it into MSYS2 as you did above by pressing SHIFT+INSERT. Wait for the script to finish. 
 
