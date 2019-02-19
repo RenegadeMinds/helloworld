@@ -117,7 +117,7 @@ In `GetInitialStateInternal` we'll decide which chain our Hello World game will 
         LOG (FATAL) << "Invalid chain: " << static_cast<int> (GetChain ());
       }
 
-# **INSERT DESCRIPTION OF GETCHAIN() HERE AND EXPLAIN HOW THE CHAIN IS DETERMINED. **
+# **INSERT DESCRIPTION OF GETCHAIN() HERE AND EXPLAIN HOW THE CHAIN IS DETERMINED.**
 
 Once we've decided, we'll set the height and hashHex values. The height is the block height that we want our game to start at. This should be the highest possible block height that is prior to any moves being made in our game. The hashHex is the block hash for that block. You can look up the block hash at https://explorer.xaya.io/. We're going to start our game at [block 555,555](https://explorer.xaya.io/block/555555). 
 
