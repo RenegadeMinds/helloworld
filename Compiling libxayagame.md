@@ -2,6 +2,8 @@
 
 In this tutorial, we'll compile libxayagame so that we can use it in other tutorials and even in our own games. Follow the instructions below exactly and do not deviate from them. 
 
+# Get Downloads
+
 Download MSYS2 x86_64 (https://www.msys2.org/) from this link: 
 
 http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20180531.exe
@@ -19,14 +21,20 @@ You will need several files.
 
 Download them [here](libxayagame-compiler-files.zip).
 
-Copy all those files into `C:\msys64\home\<username>\`. Do not copy into a subfolder. The files must be in the "username" folder. These files:
+# Copy Required Files
+
+Copy all those files into `C:\msys64\home\<username>\`. Do not copy into a subfolder. The files must be in the "username" folder. 
+
+Some files will be deleted when they are no longer needed.
 
 - libglog.pc
 - lmdb.pc
 - stubgeneratorfactory.cpp
 - stubgeneratorfactory.h
 
-Are automatically deleted once they are no longer needed. If you need to start over, make certain to copy them to your username folder again. 
+If you need to start over, make certain to copy them to your username folder again. 
+
+# Copy Command 1
 
 Copy the following code block to your clipboard **without the comment lines**. Make certain that you copy it exactly with no blank lines at the end. 
 
@@ -40,6 +48,8 @@ Copy the following code block to your clipboard **without the comment lines**. M
 	y
 	!
 	/********************************/
+
+# Paste Command 1
 
 In MSYS2, press SHIFT+INSERT to paste and run that. The code block above will run the "install_xaya_1.sh" script and automatically answer all the prompts. 
 
@@ -56,11 +66,15 @@ Sometimes life is messy and we must accept our fate. Click the X in the upper-ri
 
 ![Click OK](img/click-ok.png)
 
+# Restart MSYS2 and Paste Command 1 Again
+
 Run MSYS2 (64-bit) again as you did above. 
 
 Again, paste in the same code block from above using SHIFT+INSERT. 
 
 Wait for everything to install, then close and reopen MSYS2.
+
+# Copy and Paste Command 2
 
 Similar to how you copied the code block above exactly and without the comment lines and with no additional blank lines at the end, copy the following code block. 
 
@@ -77,7 +91,9 @@ Note that there is 1 blank line after "!" that should be copied, but not more th
 
 Paste it into MSYS2 as you did above by pressing SHIFT+INSERT. Wait for the script to finish. 
 
-Congratulations! You've just built your own GSP using libxayagame. You can now proceed on to the Hello World in C++ tutorial.
+# CONGRATULATIONS! 
+
+Congratulations! You've just built your own GSP using libxayagame. You can now proceed on to the Hello World in C++ tutorial where we'll put libxayagame to good use! 
 
 # Trouble Shooting
 
