@@ -18,7 +18,7 @@ Run MSYS2 from your Start menu or here:
 
 	C:\msys64\msys2.exe
 
-Copy the following code block to your clipboard. Make certain that you copy it exactly with no blank lines at the end. 
+Copy the following code block to your clipboard **without the comment lines**. Make certain that you copy it exactly with no blank lines at the end. 
 
 	/*******************************/
 	./install_xaya_1.sh <<!
@@ -33,6 +33,8 @@ Copy the following code block to your clipboard. Make certain that you copy it e
 
 In MSYS2, press SHIFT+INSERT to paste and run that. The code block above will run the "install_xaya_1.sh" script and automatically answer all the prompts. 
 
+If it doesn't work, copy the code block above into a text editor and ensure that there is no blank line at the bottom. Next, select all then copy it again and paste into MSYS2 as above. 
+
 You will see the following message:
 
 	warning: terminate MSYS2 without returning to shell and check for updates again
@@ -46,7 +48,7 @@ Again, paste in the code block from above using SHIFT+INSERT.
 
 Wait for everything to install, then close and reopen MSYS2.  
 
-Similar to how you copied the code block above exactly and with no blank lines at the end, copy the following code block.
+Similar to how you copied the code block above exactly and without the comment lines and with no blank lines at the end, copy the following code block.
 
 	/***********************/
 	./install_xaya_2.sh <<!
