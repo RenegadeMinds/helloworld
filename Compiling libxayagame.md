@@ -48,12 +48,12 @@ Wait for everything to install, then close and reopen MSYS2.
 
 Similar to how you copied the code block above exactly and with no blank lines at the end, copy the following code block.
 
-/***********************/
-./install_xaya_2.sh <<!
-Y
-!
+	/***********************/
+	./install_xaya_2.sh <<!
+	Y
+	!
 
-/************************/
+	/************************/
 
 Paste it into MSYS2 as you did above by pressing SHIFT+INSERT. Wait for the script to finish. 
 
