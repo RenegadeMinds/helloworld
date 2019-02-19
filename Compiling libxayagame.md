@@ -56,7 +56,7 @@ Sometimes life is messy and we must accept our fate. Click the X in the upper-ri
 
 ![Click OK](img/click-ok.png)
 
-Run MSYS2 again as you did above. 
+Run MSYS2 (64-bit) again as you did above. 
 
 Again, paste in the same code block from above using SHIFT+INSERT. 
 
@@ -87,17 +87,19 @@ As mentioned above, copying and pasting must be done with the proper white space
 
 Some GNU tools may cause the compilation to fail. You may need to uninstall these entirely, and then delete all references to "GnuWin32" in the Windows Registry. To do that:
 
+1. Uninstall all Gnu32 tools using their uninstallers
 1. Open up regedit.exe 
-1. Click Edit > Find...
-1. Type in GnuWin32
+1. Click Edit > Find... or press CTRL+F
+1. Type in "GnuWin32"
 1. Check:
 	1. Keys
 	1. Values
 	1. Data
+1. Make certain that the "Match whole string only" option is unchecked
 1. Click Find Next
 1. Verify that the registry entry should be deleted, then delete it
 1. Press F3 to find the next "GnuWin32" entry
-1. Repeat steps #6 and #7
+1. Repeat steps #8 and #9
 
 Once you've cleaned all the GNU entries from the registry, open a new MSYS2 (64-bit) window and try again from where it failed above. You may need to entirely start over, but it shouldn't be necessary. 
 
