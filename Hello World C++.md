@@ -278,12 +278,14 @@ libxayagame can use 3 different types of storage:
 
 Memory doesn't require a data directory, but the other 2 do. Let's check for an error there. The strings for each are as above, but lower case. 
 
+```c++
 	  if (FLAGS_datadir.empty () && FLAGS_storage_type != "memory")
 		{
 		  std::cerr << "Error: --datadir must be specified for non-memory storage"
 					<< std::endl;
 		  return EXIT_FAILURE;
 		}
+```
 
 libxayagame expects a configuration. Copy and paste the following.
 
