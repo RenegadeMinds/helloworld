@@ -19,7 +19,7 @@ You will need several files.
 
 Download them [here](libxayagame-compiler-files.zip).
 
-Copy all those files into C:\msys64\home\\<username>\. Do not copy into a subfolder. The files must be in the "username" folder. These files:
+Copy all those files into `C:\msys64\home\<username>\`. Do not copy into a subfolder. The files must be in the "username" folder. These files:
 
 - libglog.pc
 - lmdb.pc
