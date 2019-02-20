@@ -533,7 +533,7 @@ It will scroll quickly until it reaches the current block height.
 
 CONGRATULATIONS! IT WORKS! 
 
-Our next tasks are to make a move and then check the state of the game.
+Our next tasks are to check the state of the game and make a move.
 
 ## Trouble Shooting
 
@@ -542,14 +542,6 @@ If you're not getting any results, it is likely that you do not have xayad runni
 See the [First Steps tutorial](https://github.com/xaya/xaya_tutorials/wiki/First-steps) and [Startup Flags in Prerequisites](https://github.com/xaya/xaya_tutorials/wiki/Prerequisites#Startup-Flags) for information on how to run xayad properly. 
 
 Alternatively, you can run the XAYA Electron wallet as it is preconfigured to run with all the proper flags set for games, such as our Hello World example. 
-
-# Making Moves in Hello World
-
-Our Hello World game is now running as a daemon, so we must open up another command line or terminal to send moves to the XAYA blockchain. Go ahead and open one now.
-
-Moves are made through JSON RPC to the XAYA daemon, i.e. to xayad. There are many ways to do that, but we'll limit our methods to xaya-cli and curl. 
-
-If you're not already familiar with xaya-cli, see the [Getting Started with xaya-cli](https://github.com/xaya/xaya_tutorials/wiki/xaya-cli) tutorial. 
 
 # See What People Are Saying with GetCurrentState
 
@@ -589,6 +581,33 @@ Or prettified:
 		}
 }
 ```
+
+# Making Moves in Hello World
+
+Our Hello World game is now running as a daemon, so we must open up another command line or terminal to send moves to the XAYA blockchain. Go ahead and open one now.
+
+Moves are made through JSON RPC to the XAYA daemon, i.e. to xayad. There are many ways to do that, but we'll limit our methods to xaya-cli and curl. 
+
+If you're not already familiar with xaya-cli, see the [Getting Started with xaya-cli](https://github.com/xaya/xaya_tutorials/wiki/xaya-cli) tutorial. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
