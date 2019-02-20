@@ -223,9 +223,12 @@ At this point, we know that we have a valid string, so we use the players name a
 
 With our game state updated, we can return it. Create an output string buffer to store our game state in, and then return it as a string. Write that code on your own or copy and paste the following.
 
-    std::ostringstream out;
-    out << state;
-    return out.str ();
+
+```c++
+std::ostringstream out;
+out << state;
+return out.str ();
+```
 
 Congratulations! We're finished our `HelloWorld` class and can move on to `main` method!
 
@@ -233,14 +236,21 @@ Congratulations! We're finished our `HelloWorld` class and can move on to `main`
 
 Our main method will be written outside of the anonymous namespace. Wire it up as usual.
 
-	int main (int argc, char** argv)
-	{ }
+
+```c++
+int main (int argc, char** argv)
+{ }
+```
 
 ## Set Logging
 
 If you remember the glog include way up above, we're going to start using that now. Add logging as shown below. 
 
-	  google::InitGoogleLogging (argv[0]);
+
+```c++
+google::InitGoogleLogging (argv[0]);
+```
+
 
 `argv[0]` is the FLAGS_xaya_rpc_url URL, so glog will send output to libxayagame, which in turn will feed our console the logging output. 
 
@@ -287,12 +297,12 @@ libxayagame can use 3 different types of storage:
 Memory doesn't require a data directory, but the other 2 do. Let's check for an error there. The strings for each are as above, but lower case. 
 
 ```c++
-	  if (FLAGS_datadir.empty () && FLAGS_storage_type != "memory")
-		{
-		  std::cerr << "Error: --datadir must be specified for non-memory storage"
-					<< std::endl;
-		  return EXIT_FAILURE;
-		}
+if (FLAGS_datadir.empty () && FLAGS_storage_type != "memory")
+{
+  std::cerr << "Error: --datadir must be specified for non-memory storage"
+			<< std::endl;
+  return EXIT_FAILURE;
+}
 ```
 
 ## Wire Up and Set a Daemon Configuration
