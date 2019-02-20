@@ -564,23 +564,44 @@ Or prettified:
 
 ```json
 {
-	"id" : "curltest",
-	"jsonrpc" : "2.0",
-	"result" : {
-		"blockhash" : "cd8235ac63697d20732d65bd9d49bcf8107f24d4a4bc32f83e93786dd8276c6a",
-		"chain" : "main",
-		"gameid" : "helloworld",
-		"gamestate" : {
-			"ALICE" : "",
-			"BOB" : "HELLO WORLD!",
-			"Crawling Chaos" : "...Hello, ALICE!",
-			"Wile E. Coyote" : "Hello Road Runner!"
-			},
-		"height" : 610662,
-		"state" : "up-to-date"
-		}
+  "id" : "curltest",
+  "jsonrpc" : "2.0",
+  "result" : {
+    "blockhash" : "cd8235ac63697d20732d65bd9d49bcf8107f24d4a4bc32f83e93786dd8276c6a",
+    "chain" : "main",
+    "gameid" : "helloworld",
+    "gamestate" : {
+      "ALICE" : "",
+      "BOB" : "HELLO WORLD!",
+      "Crawling Chaos" : "...Hello, ALICE!",
+      "Wile E. Coyote" : "Hello Road Runner!"
+      },
+    "height" : 610662,
+    "state" : "up-to-date"
+    }
 }
 ```
+
+In there you can see our gameid is "helloworld", just as we set it above in [Start libxayagame](#start-libxayagame)
+
+```c++
+	  const int res = xaya::DefaultMain (config, "helloworld", logic);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Making Moves in Hello World
 
