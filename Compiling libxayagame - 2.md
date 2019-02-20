@@ -38,7 +38,7 @@ If you need to start over, make certain to copy them to your username folder aga
 
 # Command 1
 
-Run the following command.
+In MSYS2, run the following command.
 
 	cat "input1.txt" | ./install_xaya_1.sh
 
@@ -46,7 +46,7 @@ Wait for it to finish.
 
 # Command 2
 
-Run the following command.
+In MSYS2, run the following command.
 
 	cat "input2.txt" | ./install_xaya_2.sh
 
