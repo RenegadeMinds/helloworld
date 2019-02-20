@@ -33,7 +33,11 @@ The other includes are simply standard libraries.
 
 Much of our code will be in an anonymous namespace, so go ahead and create that.
 
-	namespace { }
+
+```c++
+namespace { }
+```
+
 
 Now we can add code to our anonymous namespace. 
 
@@ -47,11 +51,14 @@ In order to connect to the daemon, we need several variables.
 - storage_type: The type of storage to use for game data  (memory, sqlite or lmdb)
 - datadir: base data directory for game data (will be extended by the game ID and chain); must be set if --storage_type is not memory
 
-		DEFINE_string (xaya_rpc_url, "http://127.0.0.1", "");
-		DEFINE_int32 (game_rpc_port, 8900, "");
-		DEFINE_int32 (enable_pruning, -1, "");
-		DEFINE_string (storage_type, "memory", "");
-		DEFINE_string (datadir, "", "");
+
+```c++
+DEFINE_string (xaya_rpc_url, "http://127.0.0.1", "");
+DEFINE_int32 (game_rpc_port, 8900, "");
+DEFINE_int32 (enable_pruning, -1, "");
+DEFINE_string (storage_type, "memory", "");
+DEFINE_string (datadir, "", "");
+```
 
 Copy and paste that into your helloworld.cpp file under the includes.
 
@@ -61,10 +68,14 @@ Next, change `xaya_rpc_url` and `game_rpc_port` according to your environment. L
 
 Our `HelloWorld` class inherits from `xaya::CachingGame`. Let's add it.
 
-	class HelloWorld : public xaya::CachingGame
-	{
-		protected:
-	}
+
+```c++
+class HelloWorld : public xaya::CachingGame
+{
+	protected:
+}
+```
+
 
 We're going to add 3 methods to this class.
 
@@ -78,13 +89,17 @@ We're going to add 3 methods to this class.
 
 While we may not strictly need this method in our Hello World game, it's nice to have. Copy and paste it into our `HelloWorld` class.
 
-	  GameStateToJson (const xaya::GameStateData& state) override
-	  {
-		std::istringstream in(state);
-		Json::Value jsonState;
-		in >> jsonState;
-		return jsonState;
-	  }
+
+```c++
+GameStateToJson (const xaya::GameStateData& state) override
+{
+	std::istringstream in(state);
+	Json::Value jsonState;
+	in >> jsonState;
+	return jsonState;
+}
+```
+
 
 In there we get our GameStateData into a string buffer, then store it in a JSON value and return the JSON. This makes dealing with our GameStateData easier to handle because it's now just a big bunch of key/value pairs stored in JSON. 
 
@@ -94,28 +109,35 @@ Next, our `GetInitialStateInternal` is similarly quite easy. It decides which ch
 
 Start writing that method as shown below.
 
-	  xaya::GameStateData
-	  GetInitialStateInternal (unsigned& height, std::string& hashHex) override
-	  { }
+
+```c++
+xaya::GameStateData
+GetInitialStateInternal (unsigned& height, std::string& hashHex) override
+{ }
+```
+
 
 ## Choose Which Chain to Run On
 
 In `GetInitialStateInternal` we'll decide which chain our Hello World game will run on, i.e. mainnet, testnet, or regtest. We'll use the xaya::Chain enumeration to choose. Add in a switch case block as shown below. 
 
-    switch (GetChain ())
-      {
-      case xaya::Chain::MAIN:
-        break;
 
-      case xaya::Chain::TEST:
-        break;
+```c++
+switch (GetChain ())
+{
+	case xaya::Chain::MAIN:
+	break;
 
-      case xaya::Chain::REGTEST:
-        break;
+	case xaya::Chain::TEST:
+	break;
 
-      default:
-        LOG (FATAL) << "Invalid chain: " << static_cast<int> (GetChain ());
-      }
+	case xaya::Chain::REGTEST:
+	break;
+
+	default:
+	LOG (FATAL) << "Invalid chain: " << static_cast<int> (GetChain ());
+}
+```
 
 The `GetChain` method detects which chain we're on, i.e. mainnet, testnet, or regtest. We'll actually decide what chain we want to run on at runtime when we pass in a command line argument for `xaya_rpc_url`. Here are some possibilities for mainnet, testnet, and regtest, respectively:
 
@@ -127,17 +149,21 @@ With that decided, we set the height and hashHex values. The height is the block
 
 Go ahead and add that to the mainnet case as shown below.
 
-      case xaya::Chain::MAIN:
-        height = 555555;
-        hashHex
-          = "ce6a6ae43103db943a74294b90906de9bb873d602f2881ddb3eb7a9f0e626312";
-        break;
+```c++
+case xaya::Chain::MAIN:
+	height = 555555;
+	hashHex
+	  = "ce6a6ae43103db943a74294b90906de9bb873d602f2881ddb3eb7a9f0e626312";
+	break;
+```
 
 Fill in the values for testnet and regtest. You can leave them blank if you wish as we won't be using them. In a real game, you would have to fill in those values because you would need to use testnet and regtest during development. 
 
 Since the initial state is only run once, and we need to have a valid value for our GameStateData, return a simple, valid JSON string as shown below. 
 
-	return "{}";
+```c++
+return "{}";
+```
 
 That's the end of GetInitialStateInternal. We now turn our attention to the meaty goodness of processing "moves" in the game. 
 
@@ -147,25 +173,28 @@ The `UpdateState` method iterates over the various players in our game and creat
 
 Wire up your `UpdateState` method as shown below.
 
-	  xaya::GameStateData
-	  UpdateState (const xaya::GameStateData& oldState,
-				   const Json::Value& blockData) override
-	  { }
+```c++
+xaya::GameStateData
+UpdateState (const xaya::GameStateData& oldState,
+    const Json::Value& blockData) override
+{ }
+```
 
 ## Get the Previous Game State
 
 We need to have the game state from the previous block and the new moves in order to process our game logic and come up with a new game state. So, first we get the old game state (`oldState`), store it in a string buffer and then put it into a JSON value so that we can use it easily. Type or copy and paste the following into your `UpdateState` method.
 
-		std::istringstream in(oldState);
-		Json::Value state;
-		in >> state;
+```c++
+std::istringstream in(oldState);
+Json::Value state;
+in >> state;
+```
 
 We now have our previous game state stored in `state`.
 
 ## Iterate Over the Moves
 
 We need to look at all the new moves in the new block data. Our `blockData` will contain JSON similar to the following.
-
 
 ```json
 {
@@ -196,15 +225,12 @@ The "moves" node is an array. We are only interested in the "move" and the "name
 
 Go ahead and wire up a for statement to iterate over all the "moves" in our `blockData`.
 
-
-
 ```c++
 for (const auto& entry : blockData["moves"])
 {
 
 }
 ```
-
 As mentioned above, we're really only interested in "name" and "move". Let's get them from our blockData into a string and an auto&.
 
 
@@ -215,9 +241,8 @@ const auto& mvData = entry["move"];
 
 The "name" is simple enough, but we don't know anything about the "move" is. We know what a valid move should look like, but we don't know what **THIS** move is, so we must do some error checking. Check to see if we have a valid string. If it's not valid, then we send ourselves a message and go back to the top of our for loop. Go ahead and add some code to do that or copy and paste the following into your `UpdateState` method.
 
-
 ```c++
-if (!mvData.isString ())
+if (mvData.empty ())
 {
 	LOG (WARNING)
 		<< "Move data for " << name << " is not a string: " << mvData;
@@ -225,20 +250,24 @@ if (!mvData.isString ())
 }
 ```
 
+The inferred data type is `Json::Value`. Above we only check for whether or not it is empty, but more thorough error checking is certainly recommended.
+
 ## Update the Game State
 
 At this point, we know that we have a valid string, so we use the players name as a key for our game state (`state`) and we assign its value as our move. 
 
+If you remember from above, "m" stores our Hello World message. Get "m" out of mvData and store it in our game state with the player's name as the key. 
 
 ```c++
-state[name] = mvData.asString ();
+const auto& message = mvData["m"].asString ();
+state[name] = message;
 ```
 
+You've just updated the game state. Time to return it. 
 
 ## Return the Game State
 
 With our game state updated, we can return it. Create an output string buffer to store our game state in, and then return it as a string. Write that code on your own or copy and paste the following.
-
 
 ```c++
 std::ostringstream out;
@@ -262,11 +291,9 @@ int main (int argc, char** argv)
 
 If you remember the glog include way up above, we're going to start using that now. Add logging as shown below. 
 
-
 ```c++
 google::InitGoogleLogging (argv[0]);
 ```
-
 
 `argv[0]` is the FLAGS_xaya_rpc_url URL, so glog will send output to libxayagame, which in turn will feed our console the logging output. 
 
@@ -294,7 +321,6 @@ We must check for some errors.
 
 We must have a correct RPC URL. You can write code to do thorough error checking or copy and paste the basic check here.
 
-
 ```c++
 if (FLAGS_xaya_rpc_url.empty ())
 {
@@ -302,7 +328,6 @@ if (FLAGS_xaya_rpc_url.empty ())
   return EXIT_FAILURE;
 }
 ```
-
 
 libxayagame can use 3 different types of storage:
 
@@ -342,22 +367,18 @@ We'll fill the configuration with data from our flags. Write code to fill the fl
 ```
 
 **NOTE:** The configuration requires an RPC server type. It is set as follows. 
-
 	
 ```c++
 	config.GameRpcServer = xaya::RpcServerType::HTTP;
 ```
-	
 
 ## Instantiate an Instance of Your HelloWorld Class
 
 It's time to put our HelloWorld class to work. Instantiate an instance of it now. 
-
 	  
 ```c++
 	  HelloWorld logic;
-```
-	  
+```	  
 
 ## libxayagame Startup Checklist	  
 
@@ -376,13 +397,11 @@ Our game logic is our **`HelloWorld` class**.
 ## Start libxayagame
 
 Copy and paste the following at the end of your main method.
-
 	  
 ```c++
 	  const int res = xaya::DefaultMain (config, "helloworld", logic);
 	  return res;
 ```
-	  
 
 Connecting to libxayagame is a blocking operation, so `return res;` will never be reached<!-- unless the user presses CTRL+C -->. 
 
@@ -390,8 +409,84 @@ CONGRATULATIONS! You can now compile and run your Hello World application. It wi
 
 # Compile Hello World
 
+Compiling Hello World has quite a few requirements, and for some people this is probably the most difficult part. 
 
+Our Hello World needs libxayagame to work. For that, we must compile libxayagame. 
 
+Once that's done we have to compile Hello World.
+
+In this tutorial we are using MSYS2 (64-bit) and g++ to compile both libxayagame and Hello World. You can use other compilers if you wish. 
+
+## Compiling libxayagame
+
+There is a separate tutorial to show you how to compile libxayagame. It has all the scripts and instructions needed. Finish the [How to Compile libxayagame](Compiling%20libxayagame%20-%202.md) tutorial then return back here. If all goes well, you can complete that tutorial in a few minutes. 
+
+## Compiling Hello World
+
+Now you have libxayagame built and available. 
+
+1. Open up MSYS2
+1. Create a new folder for Hello World and copy in all the files for it, i.e.:
+	* helloworld.cpp
+	* build.sh
+	* hellotest.py
+	* run-regtest.sh
+	* run-mainnet.sh
+1. Run build.sh as follows:
+	
+	./build.sh
+
+1. Done.
+
+However, hello won't run quite yet. libxayagame is built into it, but libxayagame has some dependencies. In a file explorer, navigate to this folder:
+
+	C:\msys64\mingw64\bin
+
+In there we must copy the following files into the same folder as the new Hello World executable. 
+
+1. libbrotlicommon.dll
+1. libbrotlidec.dll
+1. libcrypto-1_1-x64.dll
+1. libcurl-4.dll
+1. libffi-6.dll
+1. libgcc_s_seh-1.dll
+1. libgflags.dll
+1. libgflags_nothreads.dll
+1. libglog.dll
+1. libgmp-10.dll
+1. libgnutls-30.dll
+1. libgtest.dll
+1. libgtest_main.dll
+1. libhogweed-4.dll
+1. libiconv-2.dll
+1. libidn2-0.dll
+1. libintl-8.dll
+1. libjsoncpp-20.dll
+1. libjsonrpccpp-client.dll
+1. libjsonrpccpp-common.dll
+1. libjsonrpccpp-server.dll
+1. libjsonrpccpp-stub.dll
+1. liblmdb.dll
+1. libmicrohttpd-12.dll
+1. libnettle-6.dll
+1. libnghttp2-14.dll
+1. libp11-kit-0.dll
+1. libprotobuf-lite.dll
+1. libprotobuf.dll
+1. libprotoc.dll
+1. libpsl-5.dll
+1. libsodium-23.dll
+1. libsqlite3-0.dll
+1. libssh2-1.dll
+1. libssl-1_1-x64.dll
+1. libstdc++-6.dll
+1. libtasn1-6.dll
+1. libunistring-2.dll
+1. libwinpthread-1.dll
+1. libzmq.dll
+1. zlib1.dll
+
+With those files copied, all our dependencies are covered, and we can run Hello World.
 
 # Run Hello World
 
@@ -403,7 +498,18 @@ Our Hello World application needs several parameters to be set. Recall from [Set
 - FLAGS_storage_type
 - FLAGS_datadir
 
-We set the `FLAGS_enable_pruning` flag independently of any command line arguments. So, we must pass in the other 4 when we run HelloWorld. Running on the regtest chain will look something like this:
+# Run Hello World
+
+## Run with Electron Wallet
+
+hello --xaya_rpc_url="http://__cookie__:62c7a564a2eea4b0e56b4ee9d0abdbb12c1a859139af4f3b045534bf5445c59d@127.0.0.1:8396" --game_rpc_port=29050 --storage_type=memory --datadir=/tmp/xayagame
+
+## Run with xayad
+
+
+
+
+We set the `FLAGS_enable_pruning` flag independently of any command line arguments. So, we must pass in the other 4 when we run Hello World. Running on the regtest chain will look something like this:
 
 	./hello --xaya_rpc_url="http://user:password@localhost:18493" --game_rpc_port=29050  --storage_type=memory --datadir=/tmp/xayagame
 
@@ -419,25 +525,62 @@ Or on Windows like this:
 
 	hello.exe --xaya_rpc_url="http://user:password@localhost:8396" --game_rpc_port=29050 --storage_type=memory --datadir=/tmp/xayagame
 
+Run one of those now. 
 
+![Screenshot of Hello World]()
 
+It will scroll quickly until it reaches the current block height.
 
+CONGRATULATIONS! IT WORKS! 
 
+Our next tasks are to make a move and then check the state of the game.
 
+## Trouble Shooting
 
+If you're not getting any results, it is likely that you do not have xayad running. 
 
+See the [First Steps tutorial](https://github.com/xaya/xaya_tutorials/wiki/First-steps) and [Startup Flags in Prerequisites](https://github.com/xaya/xaya_tutorials/wiki/Prerequisites#Startup-Flags) for information on how to run xayad properly. 
 
+Alternatively, you can run the XAYA Electron wallet as it is preconfigured to run with all the proper flags set for games, such as our Hello World example. 
 
+# Making Moves in Hello World
 
+Our Hello World game is now running as a daemon, so we must open up another command line or terminal to send moves to the XAYA blockchain. Go ahead and open one now.
 
+Moves are made through JSON RPC to the XAYA daemon, i.e. to xayad. There are many ways to do that, but we'll limit our methods to xaya-cli and curl. 
 
+If you're not already familiar with xaya-cli, see the [Getting Started with xaya-cli](https://github.com/xaya/xaya_tutorials/wiki/xaya-cli) tutorial. 
 
+# See What People Are Saying with GetCurrentState
 
+To get the game state and see what people are saying, we must issue an RPC command to the Hello World daemon. We can use curl for that. Note that we must use JSON 2.0. 
 
+	curl --user "" --data-binary '{"jsonrpc": "2.0", "id":"curltest", "method": "getcurrentstate"}" -H 'content-type: text/plain;' http://127.0.0.1:29050/
 
+Or on Windows:
 
-If you want to make a move, read on!
+	curl --user "" --data-binary "{\"jsonrpc\": \"2.0\", \"id\":\"curltest\", \"method\": \"getcurrentstate\"}" -H "content-type: text/plain;" http://127.0.0.1:29050/
 
-# Making Moves in HelloWorld
+Try that in your command window now. Press ENTER if prompted for a password. 
+
+Our result is JSON.
+
+	{"id":"curltest","jsonrpc":"2.0","result":{"blockhash":"c85b8e003dd1db4c6ec0e9c89b1a093e125626972cda7dbf64b353860f0cba7f","chain":"main","gameid":"helloworld","gamestate":{},"height":610402,"state":"up-to-date"}}
+
+Or prettified:
+
+	{
+	"id" : curltest,
+	"jsonrpc" : 2.0,
+	"result" : -{
+		"blockhash" : c85b8e003dd1db4c6ec0e9c89b1a093e125626972cda7dbf64b353860f0cba7f,
+		"chain" : main,
+		"gameid" : helloworld,
+		"gamestate" : -{
+		},
+		"height" : 610402,
+		"state" : up-to-date
+		}
+	}
 
 
