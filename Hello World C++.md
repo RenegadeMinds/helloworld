@@ -268,11 +268,15 @@ We must check for some errors.
 
 We must have a correct RPC URL. You can write code to do thorough error checking or copy and paste the basic check here.
 
-	  if (FLAGS_xaya_rpc_url.empty ())
-		{
-		  std::cerr << "Error: --xaya_rpc_url must be set" << std::endl;
-		  return EXIT_FAILURE;
-		}
+
+```c++
+if (FLAGS_xaya_rpc_url.empty ())
+{
+  std::cerr << "Error: --xaya_rpc_url must be set" << std::endl;
+  return EXIT_FAILURE;
+}
+```
+
 
 libxayagame can use 3 different types of storage:
 
@@ -314,9 +318,9 @@ We'll fill the configuration with data from our flags. Write code to fill the fl
 **NOTE:** The configuration requires an RPC server type. It is set as follows. 
 
 	
-	```c++
+```c++
 	config.GameRpcServer = xaya::RpcServerType::HTTP;
-	```
+```
 	
 
 ## Instantiate an Instance of Your HelloWorld Class
@@ -324,9 +328,9 @@ We'll fill the configuration with data from our flags. Write code to fill the fl
 It's time to put our HelloWorld class to work. Instantiate an instance of it now. 
 
 	  
-	  ```c++
+```c++
 	  HelloWorld logic;
-	  ```
+```
 	  
 
 ## libxayagame Startup Checklist	  
@@ -348,10 +352,10 @@ Our game logic is our **`HelloWorld` class**.
 Copy and paste the following at the end of your main method.
 
 	  
-	  ```c++
+```c++
 	  const int res = xaya::DefaultMain (config, "helloworld", logic);
 	  return res;
-	  ```
+```
 	  
 
 Connecting to libxayagame is a blocking operation, so `return res;` will never be reached<!-- unless the user presses CTRL+C -->. 
