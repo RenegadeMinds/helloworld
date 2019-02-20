@@ -194,30 +194,43 @@ The "moves" node is an array. We are only interested in the "move" and the "name
 Go ahead and wire up a for statement to iterate over all the "moves" in our `blockData`.
 
 
-    for (const auto& entry : blockData["moves"])
-    {
 
-    }
+```c++
+for (const auto& entry : blockData["moves"])
+{
+
+}
+```
 
 As mentioned above, we're really only interested in "name" and "move". Let's get them from our blockData into a string and an auto&.
 
-        const std::string name = entry["name"].asString ();
-        const auto& mvData = entry["move"];
+
+```c++
+const std::string name = entry["name"].asString ();
+const auto& mvData = entry["move"];
+```
 
 The "name" is simple enough, but we don't know anything about the "move" is. We know what a valid move should look like, but we don't know what **THIS** move is, so we must do some error checking. Check to see if we have a valid string. If it's not valid, then we send ourselves a message and go back to the top of our for loop. Go ahead and add some code to do that or copy and paste the following into your `UpdateState` method.
 
-        if (!mvData.isString ())
-        {
-            LOG (WARNING)
-                << "Move data for " << name << " is not a string: " << mvData;
-            continue;
-        }
+
+```c++
+if (!mvData.isString ())
+{
+	LOG (WARNING)
+		<< "Move data for " << name << " is not a string: " << mvData;
+	continue;
+}
+```
 
 ## Update the Game State
 
 At this point, we know that we have a valid string, so we use the players name as a key for our game state (`state`) and we assign its value as our move. 
 
-        state[name] = mvData.asString ();
+
+```c++
+state[name] = mvData.asString ();
+```
+
 
 ## Return the Game State
 
