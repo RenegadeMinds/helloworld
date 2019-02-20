@@ -90,7 +90,7 @@ In there we get our GameStateData into a string buffer, then store it in a JSON 
 
 # Write the GetInitialStateInternal Method
 
-Next, our `GetInitialStateInternal` is similarly quite easy. It decides which network to run on and which block to start at. It's only ever used once, but it's critical to get it right. 
+Next, our `GetInitialStateInternal` is similarly quite easy. It decides which chain to run on and which block to start at. It's only ever used once, but it's critical to get it right. 
 
 Start writing that method as shown below.
 
@@ -98,7 +98,7 @@ Start writing that method as shown below.
 	  GetInitialStateInternal (unsigned& height, std::string& hashHex) override
 	  { }
 
-## Choose Which Network to Run On
+## Choose Which Chain to Run On
 
 In `GetInitialStateInternal` we'll decide which chain our Hello World game will run on, i.e. mainnet, testnet, or regtest. We'll use the xaya::Chain enumeration to choose. Add in a switch case block as shown below. 
 
@@ -313,13 +313,21 @@ We'll fill the configuration with data from our flags. Write code to fill the fl
 
 **NOTE:** The configuration requires an RPC server type. It is set as follows. 
 
+	
+	```c++
 	config.GameRpcServer = xaya::RpcServerType::HTTP;
+	```
+	
 
 ## Instantiate an Instance of Your HelloWorld Class
 
 It's time to put our HelloWorld class to work. Instantiate an instance of it now. 
 
+	  
+	  ```c++
 	  HelloWorld logic;
+	  ```
+	  
 
 ## libxayagame Startup Checklist	  
 
@@ -339,19 +347,59 @@ Our game logic is our **`HelloWorld` class**.
 
 Copy and paste the following at the end of your main method.
 
+	  
+	  ```c++
 	  const int res = xaya::DefaultMain (config, "helloworld", logic);
 	  return res;
+	  ```
+	  
 
-Connecting to libxayagame is a blocking operation, so `return res;` will never be reached unless the user presses CTRL+C. 
+Connecting to libxayagame is a blocking operation, so `return res;` will never be reached<!-- unless the user presses CTRL+C -->. 
 
-CONGRATULATIONS! You can now compile and run your helloworld application. It will run like a daemon now. 
+CONGRATULATIONS! You can now compile and run your Hello World application. It will run like a daemon now. 
 
-# Compile HelloWorld
-
-
+# Compile Hello World
 
 
-# Run HelloWorld
+
+
+# Run Hello World
+
+Our Hello World application needs several parameters to be set. Recall from [Set Flags](#set-flags) above that we have 5 flags that we set:
+
+- FLAGS_xaya_rpc_url
+- FLAGS_game_rpc_port
+- FLAGS_enable_pruning
+- FLAGS_storage_type
+- FLAGS_datadir
+
+We set the `FLAGS_enable_pruning` flag independently of any command line arguments. So, we must pass in the other 4 when we run HelloWorld. Running on the regtest chain will look something like this:
+
+	./hello --xaya_rpc_url="http://user:password@localhost:18493" --game_rpc_port=29050  --storage_type=memory --datadir=/tmp/xayagame
+
+Or on Windows like this:
+
+	hello.exe --xaya_rpc_url="http://user:password@localhost:18493" --game_rpc_port=29050 --storage_type=memory --datadir=/tmp/xayagame
+
+Running on mainnet will look something like this:
+
+	./hello --xaya_rpc_url="http://user:password@localhost:8396" --game_rpc_port=29050  --storage_type=memory --datadir=/tmp/xayagame
+
+Or on Windows like this:
+
+	hello.exe --xaya_rpc_url="http://user:password@localhost:8396" --game_rpc_port=29050 --storage_type=memory --datadir=/tmp/xayagame
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
