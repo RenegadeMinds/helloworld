@@ -117,9 +117,13 @@ In `GetInitialStateInternal` we'll decide which chain our Hello World game will 
         LOG (FATAL) << "Invalid chain: " << static_cast<int> (GetChain ());
       }
 
-# **INSERT DESCRIPTION OF GETCHAIN() HERE AND EXPLAIN HOW THE CHAIN IS DETERMINED.**
+The `GetChain` method detects which chain we're on, i.e. mainnet, testnet, or regtest. We'll actually decide what chain we want to run on at runtime when we pass in a command line argument for `xaya_rpc_url`. Here are some possibilities for mainnet, testnet, and regtest, respectively:
 
-Once we've decided, we'll set the height and hashHex values. The height is the block height that we want our game to start at. This should be the highest possible block height that is prior to any moves being made in our game. The hashHex is the block hash for that block. You can look up the block hash at https://explorer.xaya.io/. We're going to start our game at [block 555,555](https://explorer.xaya.io/block/555555). 
+- --xaya_rpc_url="http://user:password@localhost:8396"
+- --xaya_rpc_url="http://user:password@localhost:18396"
+- --xaya_rpc_url="http://user:password@localhost:18493"
+
+With that decided, we set the height and hashHex values. The height is the block height that we want our game to start at. This should be the highest possible block height that is prior to any moves being made in our game. The hashHex is the block hash for that block. You can look up the block hash at https://explorer.xaya.io/. We're going to start our game at [block 555,555](https://explorer.xaya.io/block/555555). 
 
 Go ahead and add that to the mainnet case as shown below.
 
