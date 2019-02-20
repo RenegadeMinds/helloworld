@@ -166,28 +166,31 @@ We now have our previous game state stored in `state`.
 
 We need to look at all the new moves in the new block data. Our `blockData` will contain JSON similar to the following.
 
+
+```json
+{
+  "block": {
+	"hash": "dda7eccde4857742e5000bd66cf72154ce26c22876582654bc8b8d78dadbce8c",
+	"height": 558369,
+	"parent": "18f72c91c7b9223e9c7d0525216277e4016d748a2c81be4ba9d4a2b30eaed92d",
+	"rngseed": "b36747498ce183b9da32b3ab6e0d72f2a17aa06859c08cf1d1e91907cb09dddc",
+	"timestamp": 1549056526
+  },
+  "moves": [
 	{
-	  "block": {
-		"hash": "dda7eccde4857742e5000bd66cf72154ce26c22876582654bc8b8d78dadbce8c",
-		"height": 558369,
-		"parent": "18f72c91c7b9223e9c7d0525216277e4016d748a2c81be4ba9d4a2b30eaed92d",
-		"rngseed": "b36747498ce183b9da32b3ab6e0d72f2a17aa06859c08cf1d1e91907cb09dddc",
-		"timestamp": 1549056526
+	  "move": {
+		"m": "Hello world!"
 	  },
-	  "moves": [
-		{
-		  "move": {
-			"m": "Hello world!"
-		  },
-		  "name": "ALICE",
-		  "out": {
-			"CMBPmRos5QADg2T8kvkQhMaMV5WzpzfedR": 3443.7832612
-		  },
-		  "txid": "edd0d7a7662a1b5f8ded16e333f114eb5bea343a432e6c72dfdbdcfef6bf4d44"
-		}
-	  ],
-	  "reqtoken": "1fba0f4f9e76a65b1f09f3ea40a59af8"
+	  "name": "ALICE",
+	  "out": {
+		"CMBPmRos5QADg2T8kvkQhMaMV5WzpzfedR": 3443.7832612
+	  },
+	  "txid": "edd0d7a7662a1b5f8ded16e333f114eb5bea343a432e6c72dfdbdcfef6bf4d44"
 	}
+  ],
+  "reqtoken": "1fba0f4f9e76a65b1f09f3ea40a59af8"
+}
+```
 
 The "moves" node is an array. We are only interested in the "move" and the "name". 
 
