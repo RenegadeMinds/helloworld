@@ -565,22 +565,30 @@ Try that in your command window now. Press ENTER if prompted for a password.
 
 Our result is JSON.
 
-	{"id":"curltest","jsonrpc":"2.0","result":{"blockhash":"c85b8e003dd1db4c6ec0e9c89b1a093e125626972cda7dbf64b353860f0cba7f","chain":"main","gameid":"helloworld","gamestate":{},"height":610402,"state":"up-to-date"}}
+	{"id":"curltest","jsonrpc":"2.0","result":{"blockhash":"cd8235ac63697d20732d65bd9d49bcf8107f24d4a4bc32f83e93786dd8276c6a","chain":"main","gameid":"helloworld","gamestate":{"ALICE":"","BOB":"HELLO WORLD!","Crawling Chaos":"...Hello, ALICE!","Wile E. Coyote":"Hello Road Runner!"},"height":610662,"state":"up-to-date"}}
 
 Or prettified:
 
-	{
-	"id" : curltest,
-	"jsonrpc" : 2.0,
-	"result" : -{
-		"blockhash" : c85b8e003dd1db4c6ec0e9c89b1a093e125626972cda7dbf64b353860f0cba7f,
-		"chain" : main,
-		"gameid" : helloworld,
-		"gamestate" : -{
-		},
-		"height" : 610402,
-		"state" : up-to-date
+
+```json
+{
+	"id" : "curltest",
+	"jsonrpc" : "2.0",
+	"result" : {
+		"blockhash" : "cd8235ac63697d20732d65bd9d49bcf8107f24d4a4bc32f83e93786dd8276c6a",
+		"chain" : "main",
+		"gameid" : "helloworld",
+		"gamestate" : {
+			"ALICE" : "",
+			"BOB" : "HELLO WORLD!",
+			"Crawling Chaos" : "...Hello, ALICE!",
+			"Wile E. Coyote" : "Hello Road Runner!"
+			},
+		"height" : 610662,
+		"state" : "up-to-date"
 		}
-	}
+}
+```
+
 
 
