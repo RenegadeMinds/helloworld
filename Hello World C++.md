@@ -1,8 +1,15 @@
 # Hello World C++
 
-In this tutorial we're going to build a Hello World console application in C++ from scratch. 
+In this tutorial we're going to build a Hello World console application in C++ from scratch. Once we're finished, we'll run it, check its game state, then make a move and say hello to everyone. This all involves several major steps. 
 
-Our application will connect to libxayagame, which will return results for us. In another command prompt or terminal, we'll send moves to the game and retrieve the results. 
+1. Write our Hello World code
+2. Compile libxayagame so that we can include it in our executable
+3. Compile our Hello World game with libxayagame
+4. Sort out the extra dependency files that we need
+5. Check the game state
+6. Make a move and say hello!
+
+Our application will incorporate libxayagame and will run as a daemon. In another command prompt or terminal, we'll send moves to the game and retrieve the results, which mimics a "front end" as it were. 
 
 Download the code and ancillary files [here](helloworld.zip). There are some extra files to help with compilation and running for people that need them. 
 
@@ -553,7 +560,7 @@ Or on Windows:
 
 	curl --user "" --data-binary "{\"jsonrpc\": \"2.0\", \"id\":\"curltest\", \"method\": \"getcurrentstate\"}" -H "content-type: text/plain;" http://127.0.0.1:29050/
 
-Try that in your command window now. Press ENTER if prompted for a password. 
+Open up a new command window and try that now. Press ENTER if prompted for a password. 
 
 Our result is JSON.
 
@@ -582,35 +589,84 @@ Or prettified:
 }
 ```
 
-In there you can see our gameid is "helloworld", just as we set it above in [Start libxayagame](#start-libxayagame)
+The chain is "main", as discussed in [Choose Which Chain to Run On](#Choose-Which-Chain-to-Run-On). 
+
+You can also see our gameid is "helloworld", just as we set it above in [Start libxayagame](#start-libxayagame).
 
 ```c++
 	  const int res = xaya::DefaultMain (config, "helloworld", logic);
 ```
 
+However, of most interest is our game state.
 
 
+```json
+"gamestate" : {
+      "ALICE" : "",
+      "BOB" : "HELLO WORLD!",
+      "Crawling Chaos" : "...Hello, ALICE!",
+      "Wile E. Coyote" : "Hello Road Runner!"
+      }
+```
 
+If you recall from above in [Update the Game State](#Update-the-Game-State), we added players to our game state with their name as the key and their message as the value.
 
+```c++
+const auto& message = mvData["m"].asString ();
+state[name] = message;
+```
 
+Now we have those back in a nice neat list.
 
+If we were to have a front end for our Hello World game, we would take that game state and process it. That might mean displaying all players in a list with their messages like this:
 
+	<name> said "<message>"
 
-
-
-
-
-
-
+Now that we know how to get the game state, let's make a move!
 
 # Making Moves in Hello World
 
-Our Hello World game is now running as a daemon, so we must open up another command line or terminal to send moves to the XAYA blockchain. Go ahead and open one now.
+With our Hello World game now running as a daemon with libxayagame embedded inside it, we must use another command line or terminal to send moves to the XAYA blockchain. Go ahead and open one now. 
 
 Moves are made through JSON RPC to the XAYA daemon, i.e. to xayad. There are many ways to do that, but we'll limit our methods to xaya-cli and curl. 
 
 If you're not already familiar with xaya-cli, see the [Getting Started with xaya-cli](https://github.com/xaya/xaya_tutorials/wiki/xaya-cli) tutorial. 
 
+Each game has it's own format for sending moves. For Hello World, it's trivial.
+
+	"m":"<hello message>"
+
+However, there's a general format for all games. Here you can see the above embedded in it:
+
+{"g":{"helloworld":{"m":"<hello message>"}}}
+
+The "g" means the game namespace and "helloworld" is the name of the game. 
+
+## Time to Make Your Move!
+
+Let's find out if you have a name in your XAYA wallet. In your command prompt/terminal, navigate to the folder with the XAYA QT wallet because xaya-cli is in there. 
+
+Type or copy and paste this command:
+
+	xaya-cli name_list
+
+If you have any names, they'll be listed. If you don't have any, go back and [complete that portion of the First Steps tutorial](First-steps#create-a-xaya-name).
+
+Moves are made through the name_update RPC method. The following is an example that updates your name to have no value.
+
+	xaya-cli name_update "p/<my name>" "{}"
+
+Combining that with our move structure from above yields the following.
+
+	xaya-cli name_update "p/<my name>" "{\"g\":{\"helloworld\":{\"m\":\"Hello World!\"}}}"
+
+Replace your name in that command and run it to make a move in our Hello World game. 
+
+You will receive an error code if you made a mistake, or if all went well you'll receive a transaction ID (or txid as is more commonly used). 
+
+CONGRATULATIONS! You made a move in Hello World! Now, check the game state as you did above. You may need to wait a minute until it's mined into the blockchain. (Miners provide an invaluable service.) 
+
+# Summary
 
 
 
