@@ -57,9 +57,9 @@ protected:
     switch (GetChain ())
       {
       case xaya::Chain::MAIN:
-        height = 600000;
-        hashHex
-          = "aba9903d5c129e0816dc28543cc5d7b223b0f6786c8f6659cedd4ca8a4faeb06";
+		height = 555555;
+		hashHex
+		  = "ce6a6ae43103db943a74294b90906de9bb873d602f2881ddb3eb7a9f0e626312";
         break;
 
       case xaya::Chain::TEST:
@@ -95,20 +95,27 @@ protected:
 
     for (const auto& entry : blockData["moves"])
       {
+        //
         const std::string name = entry["name"].asString ();
         const auto& mvData = entry["move"];
 
         /* Move data is entered by the users, so it can be anything.  We have
            to ensure that it is properly verified and only valid moves are
-           accepted.  */
-        if (!mvData.isString ())
+           accepted. */
+        if (mvData.empty ())
           {
             LOG (WARNING)
                 << "Move data for " << name << " is not a string: " << mvData;
             continue;
           }
 
-        state[name] = mvData.asString ();
+        // Store the message to use below.
+		const auto& message = mvData["m"].asString ();
+
+		// Some output is nice.
+		std::cout << name << " said " << message << "\r\n";
+
+        state[name] = message;
       }
 
     std::ostringstream out;
