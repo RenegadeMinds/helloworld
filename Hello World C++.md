@@ -50,7 +50,7 @@ Now we can add code to our anonymous namespace.
 
 # Define Connection Variables
 
-In order to connect to the daemon, we need several variables.
+In order to connect to the daemon, we need several flags.
 
 - xaya_rpc_url: URL at which Xaya Core's JSON-RPC interface is available
 - game_rpc_port: The port at which the game daemon's JSON-RPC server will be start (if non-zero). 
@@ -554,13 +554,13 @@ Alternatively, you can run the XAYA Electron wallet as it is preconfigured to ru
 
 To get the game state and see what people are saying, we must issue an RPC command to the Hello World daemon. We can use curl for that. Note that we must use JSON 2.0. 
 
-	curl --user "" --data-binary '{"jsonrpc": "2.0", "id":"curltest", "method": "getcurrentstate"}" -H 'content-type: text/plain;' http://127.0.0.1:29050/
+	curl --data-binary '{"jsonrpc": "2.0", "id":"curltest", "method": "getcurrentstate"}" -H 'content-type: text/plain;' http://127.0.0.1:29050/
 
 Or on Windows:
 
-	curl --user "" --data-binary "{\"jsonrpc\": \"2.0\", \"id\":\"curltest\", \"method\": \"getcurrentstate\"}" -H "content-type: text/plain;" http://127.0.0.1:29050/
+	curl --data-binary "{\"jsonrpc\": \"2.0\", \"id\":\"curltest\", \"method\": \"getcurrentstate\"}" -H "content-type: text/plain;" http://127.0.0.1:29050/
 
-Open up a new command window and try that now. Press ENTER if prompted for a password. 
+Open up a new command window and try that now.  
 
 Our result is JSON.
 
