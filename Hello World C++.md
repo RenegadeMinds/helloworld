@@ -638,7 +638,7 @@ Each game has it's own format for sending moves. For Hello World, it's trivial.
 
 However, there's a general format for all games. Here you can see the above embedded in it:
 
-{"g":{"helloworld":{"m":"<hello message>"}}}
+	{"g":{"helloworld":{"m":"<hello message>"}}}
 
 The "g" means the game namespace and "helloworld" is the name of the game. 
 
